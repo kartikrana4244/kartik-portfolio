@@ -5,22 +5,24 @@ import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Kartik Studio",
+    title: "Antwork Consultants",
     description:
-      "A comprehensive platform concept for video editing services and tutorials, helping creators elevate their visual content.",
+      "A professional consulting and recruitment platform that helps businesses find the right talent and workforce solutions. Designed with a modern, responsive interface to improve user experience and accessibility. Focused on delivering reliable hiring services and connecting companies with skilled professionals.",
     imageAlt: "Clean desk setup with editing screen",
-    tech: ["Next.js", "Tailwind", "Framer Motion"],
-    liveUrl: "#",
+    tech: ["Next.js", "Tailwind css"],
+    liveUrl: "https://www.antworkconsultants.com/",
     githubUrl: "#"
   },
   {
-    title: "Modern Portfolio",
+    title: "Rana Electrical",
     description:
-      "A high-performance developer portfolio template focused on motion, typography, and premium aesthetics.",
+      "A professional website developed for Rana Electrical to showcase electrical services and solutions. Built with a clean, responsive design to help customers easily explore services and contact the business. Focused on performance, modern UI, and a smooth user experience across all devices.",
     imageAlt: "Laptop with code and gradient UI",
-    tech: ["React", "Next.js", "TypeScript"],
-    liveUrl: "#",
-    githubUrl: "#"
+    tech: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://rana-elecrical.vercel.app/",
+    githubUrl: "https://github.com/kartikrana4244/Rana-elecrical.git",
+    githubTarget: "_blank",
+    githubRel: "noopener noreferrer"
   },
   {
     title: "Creative Agency Site",
@@ -118,6 +120,8 @@ export function Work() {
               <div className="mt-auto flex items-center justify-between pt-2 text-xs">
                 <a
                   href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-full bg-primary-gradient px-3.5 py-1.5 text-[11px] font-medium text-white shadow-soft-glow hover:shadow-[0_0_40px_rgba(249,115,22,0.8)] transition-shadow"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -125,6 +129,8 @@ export function Work() {
                 </a>
                 <a
                   href={project.githubUrl}
+                  target={project.githubTarget}
+                  rel={project.githubRel}
                   className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-black/70 px-3.5 py-1.5 text-[11px] font-medium text-slate-100 hover:border-orange-500/60 hover:text-orange-100 transition-colors"
                 >
                   <Github className="w-3.5 h-3.5" />
